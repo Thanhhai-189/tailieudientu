@@ -1,0 +1,126 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="shortcut icon" href="data/favicon.ico" type="image/x-icon" />
+<title>THỰC HÀNH ĐIỆN - ĐIỆN TỬ Ô TÔ</title>
+<style>
+/* Book
+----------------------------------------------------- */
+.book-container {
+	width: 375px;
+	margin-top: 30px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 0;
+	display: block;
+	-webkit-perspective: 1200px;
+	-moz-perspective: 1200px;
+	perspective: 1200px;
+}
+  
+.book {
+    z-index: 5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    -webkit-transition: 0.75s;
+    -moz-transition: 0.75s;
+    transition: 0.75s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 125px 0;
+    -moz-transform-origin: 125px 0;
+    transform-origin: 125px 0;
+}
+.book:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 3px;
+    width: 7px;
+    background: url(cover.png) repeat-y; z-index: 20;
+    -webkit-transform: translateZ(1px); /* Fix for flickering in Chrome  */
+}
+.book:hover {
+    -webkit-transform: translateX(-10px) translateZ(35px) translateX(35px) rotateY(45deg);
+    -moz-transform: translateX(-10px) translateZ(35px) translateX(35px) rotateY(45deg);
+    transform: translateX(-10px) translateZ(35px) translateX(35px) rotateY(45deg);
+}
+  
+/*
+Book cover and spine
+---------------------------------------------------------------------------------------------------------------------------------------------------- */
+.book-cover { position: relative; z-index: 10;}
+.book-cover img { vertical-align: bottom; max-width: 100%; height: auto; }
+  
+.book-spine {
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    top: 0;
+    width: 50px;
+    z-index: 5;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    background: url(images/spine.jpg) -64px 0 no-repeat;
+    background-size: auto 100%;
+    -webkit-transform: rotateY(-90deg) translateX(-49px);
+    -moz-transform: rotateY(-90deg) translateX(-49px);
+    transform: rotateY(-90deg) translateX(-49px);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+.book-spine h1 {
+	display: block;
+	width: 545px;
+	text-align: left;
+	color: #fff;
+	position: absolute;
+	top: 20px;
+	left: 33px;
+	text-indent: 20px;
+	text-transform: uppercase;
+	font-family: "league_gothic_condensedRg", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	opacity: 0.95;
+	font-weight: bolder;
+	-webkit-font-smoothing: antialiased;
+	-webkit-transform: rotateZ(90deg);
+	-moz-transform: rotateZ(90deg);
+	transform: rotateZ(90deg);
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	transform-origin: 0 0;
+}
+.book-spine:before { display: block; content: ""; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.3); }
+
+</style>
+</head>
+
+<body style="
+    margin:0;
+    padding:0;
+    background: url('data/bo.jpg') no-repeat center center fixed;
+    background-size: cover;
+">
+<div class="book-container">
+
+  
+    <div class="book">
+  
+        <div class="book-cover">
+           <a href="data/index.html" target="_blank" title="CLICK CHUỘT TRÁI ĐỂ VÀO TÀI LIỆU"><img src="data/bia.png" ></a>
+		      </div>
+  
+        <div class="book-spine">
+            <h1>THỰC HÀNH ĐIỆN - ĐIỆN TỬ Ô TÔ</h1>
+        </div>
+  
+    </div>
+  
+</div>
+</body>
+</html>
